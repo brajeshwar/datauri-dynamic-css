@@ -1,1 +1,45 @@
 DataURI and Dynamic CSS
+=======================
+
+How this thing works
+--------------------
+
+Every page has some icons to be shown. The default placeholder icon is
+inserted using a simple CSS rule and then after page load some simple
+JS code gets the ids of the actual images to be displayed (from the
+special attribute `imgID`) and then constructs a link to a handler
+which generates a CSS file with Data-URIs embedded in it so that we
+can download all the required logo images with a single HTTP call and
+insert them seamlessly into an HTML file.
+
+Example:
+
+Say the markup is like this -
+
+    <li class="img img_500" imgID="500">Foo</li>
+    <li class="img img_600" imgID="600">Bar</li>
+
+The JS code extracts the "imgID" from the li and constructs a query
+like this and inserts it into the DOM inside a link tag -
+
+     stylesheets/logos.css?i=500|600
+
+And then my special handler generates a CSS file by reading the actual
+images and base64 encoding them.
+
+The CSS file is loaded into the DOM and the new logos show up
+instantly.
+
+Limitations
+-----------
+
+We are currently limited by the maximum number of characters allowed
+in an URL, though some clever form of encoding the data might help.
+
+Authors
+-------
+
+Baishampayan Ghose http://freegeek.in
+Sidhant Godiwala http://
+Brajeshwar Oinam
+
