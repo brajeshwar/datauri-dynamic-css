@@ -1,0 +1,39 @@
+#o {
+    width: 75%;
+    margin: 1em auto;
+}
+#content {
+    overflow: hidden;
+}
+#lt {
+    float: left;
+    width: 25%;
+}
+#rt {
+    float: right;
+    width: 70%;
+    border-left: 1px solid #eee;
+    padding-left: 1em;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    margin: 0;
+    padding: 0.25em 0;
+}
+.des {
+    padding: 0.5em 1em;
+    border: 1px solid #aaa;
+    background: #eee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.img {
+    background: transparent url(img/default.gif) no-repeat 0 50%;
+    min-height: 16px;
+    padding-left: 30px;
+}
