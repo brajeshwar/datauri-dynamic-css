@@ -1,0 +1,2 @@
+{% for d in data %}
+.ico_{{ d.get('img')}} {background-image: url('data:image/png;base64,{{ d.get('data') }}');}{% endfor -%}

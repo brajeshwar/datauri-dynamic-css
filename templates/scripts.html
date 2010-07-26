@@ -1,0 +1,14 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var imgs = $('li.img');
+        
+        var img_ids = [];
+        $(imgs).each(function (idx, val) {
+            img_ids.push($(val).attr('imgid'));
+        });
+        var args = img_ids.join('|');
+        var html_str = '<link rel="stylesheet" type="text/css" href="/stylesheets/logos.css?i=' + args + ' />';
+        $('head').append(html_str);
+    });
+</script>
