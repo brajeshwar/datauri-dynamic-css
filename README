@@ -36,10 +36,17 @@ Limitations
 We are currently limited by the maximum number of characters allowed
 in an URL, though some clever form of encoding the data might help.
 
+Running the sample app
+----------------------
+
+$ sudo easy_install flask
+$ python app.py
+$ open http://127.0.0.1:5000/
+
 Authors
 -------
 
 Baishampayan Ghose http://freegeek.in
-Sidhant Godiwala http://
-Brajeshwar Oinam
+Sidhant Godiwala http://sidhantgodiwala.wordpress.com
+Brajeshwar Oinam http://brajeshwar.com
 
