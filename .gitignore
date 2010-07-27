@@ -1,0 +1,5 @@
+.DS_Store
+.localized
+._.DS_Store
+*.pyc
+datauri
